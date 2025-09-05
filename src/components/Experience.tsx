@@ -1,65 +1,60 @@
-import { Building, Calendar, MapPin, ExternalLink } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Building, Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'DevOps Intern',
-      company: 'SLT Digital Lab',
-      location: 'Sri Lanka',
-      period: '2025 (Upcoming)',
-      type: 'Internship',
-      description: 'Upcoming internship focusing on DevOps practices, CI/CD pipelines, and cloud infrastructure management.',
+      title: "DevOps Intern",
+      company: "SLT Digital Lab",
+      location: "Sri Lanka",
+      period: "2025 (Upcoming)",
+      type: "Internship",
+      description:
+        "Upcoming internship focusing on DevOps practices, CI/CD pipelines, and cloud infrastructure management.",
       highlights: [
-        'Cloud infrastructure setup and management',
-        'CI/CD pipeline development',
-        'Automation and monitoring systems',
-        'Collaboration with development teams'
+        "Cloud infrastructure setup and management",
+        "CI/CD pipeline development",
+        "Automation and monitoring systems",
+        "Collaboration with development teams",
       ],
-      technologies: ['Azure', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform'],
-      status: 'upcoming'
+      technologies: ["Azure", "Docker", "Kubernetes", "Jenkins", "Terraform"],
+      status: "upcoming",
     },
+
     {
-      title: 'Software Development Intern',
-      company: 'Orange Orel Corporation',
-      location: 'Sri Lanka',
-      period: '2025 (Upcoming)',
-      type: 'Internship',
-      description: 'Upcoming software development internship focusing on full-stack development and enterprise solutions.',
+      title: "University Projects & Research",
+      company: "University of Kelaniya",
+      location: "Kelaniya, Sri Lanka",
+      period: "2024 - completed",
+      type: "Academic",
+      description:
+        "Leading and contributing to various university projects spanning IoT, full-stack development, and research initiatives.",
       highlights: [
-        'Full-stack web application development',
-        'Enterprise software solutions',
-        'Code quality and best practices',
-        'Agile development methodologies'
+        "MyBike - Sustainable Bicycle Sharing System",
+        "IoT GPS Tracking Solutions",
+        "E-commerce Platform Development",
+        "Research in Cybersecurity Applications",
       ],
-      technologies: ['React', 'Spring Boot', 'Database Management', 'API Development'],
-      status: 'upcoming'
+      technologies: ["React", "Spring Boot", "Firebase", "ESP32", "MongoDB"],
+      status: "completed",
     },
-    {
-      title: 'University Projects & Research',
-      company: 'University of Kelaniya',
-      location: 'Kelaniya, Sri Lanka',
-      period: '2024 - Present',
-      type: 'Academic',
-      description: 'Leading and contributing to various university projects spanning IoT, full-stack development, and research initiatives.',
-      highlights: [
-        'MyBike - Sustainable Bicycle Sharing System',
-        'IoT GPS Tracking Solutions',
-        'E-commerce Platform Development',
-        'Research in Cybersecurity Applications'
-      ],
-      technologies: ['React', 'Spring Boot', 'Firebase', 'ESP32', 'MongoDB'],
-      status: 'current'
-    }
   ];
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case 'upcoming':
-        return <Badge variant="outline" className="border-accent text-accent">Upcoming</Badge>;
-      case 'current':
-        return <Badge variant="outline" className="border-success text-success">Current</Badge>;
+      case "upcoming":
+        return (
+          <Badge variant="outline" className="border-accent text-accent">
+            Upcoming
+          </Badge>
+        );
+      case "completed":
+        return (
+          <Badge variant="outline" className="border-success text-success">
+            Completed
+          </Badge>
+        );
       default:
         return <Badge variant="secondary">Completed</Badge>;
     }
@@ -75,7 +70,8 @@ const Experience = () => {
               Professional <span className="gradient-text">Experience</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              My journey through internships, academic projects, and professional development.
+              My journey through internships, academic projects, and
+              professional development.
             </p>
           </div>
 
@@ -91,11 +87,13 @@ const Experience = () => {
                           <Building className="text-primary" size={20} />
                           {exp.title}
                         </CardTitle>
-                        <p className="text-lg text-primary font-medium">{exp.company}</p>
+                        <p className="text-lg text-primary font-medium">
+                          {exp.company}
+                        </p>
                       </div>
                       {getStatusBadge(exp.status)}
                     </div>
-                    
+
                     <div className="flex flex-col sm:flex-row gap-4 text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Calendar size={16} />
@@ -118,10 +116,15 @@ const Experience = () => {
 
                     {/* Key Highlights */}
                     <div className="mb-4">
-                      <h4 className="font-semibold text-foreground mb-2">Key Highlights:</h4>
+                      <h4 className="font-semibold text-foreground mb-2">
+                        Key Highlights:
+                      </h4>
                       <ul className="space-y-1">
                         {exp.highlights.map((highlight, highlightIndex) => (
-                          <li key={highlightIndex} className="flex items-start gap-2 text-muted-foreground">
+                          <li
+                            key={highlightIndex}
+                            className="flex items-start gap-2 text-muted-foreground"
+                          >
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                             {highlight}
                           </li>
@@ -131,7 +134,9 @@ const Experience = () => {
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Technologies:</h4>
+                      <h4 className="font-semibold text-foreground mb-2">
+                        Technologies:
+                      </h4>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech, techIndex) => (
                           <span key={techIndex} className="skill-tag text-xs">
@@ -154,11 +159,16 @@ const Experience = () => {
                   Ready to Collaborate?
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  I'm always open to discussing new opportunities and exciting projects.
+                  I'm always open to discussing new opportunities and exciting
+                  projects.
                 </p>
                 <div className="flex gap-2 justify-center">
-                  <button 
-                    onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  <button
+                    onClick={() =>
+                      document
+                        .querySelector("#contact")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                     className="btn-hero px-6 py-2 text-sm"
                   >
                     Let's Connect
