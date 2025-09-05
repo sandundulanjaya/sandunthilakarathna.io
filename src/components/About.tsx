@@ -42,8 +42,12 @@ const About = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto lg:mx-0 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-6"></div>
-                <div className="relative bg-gradient-to-br from-secondary to-muted rounded-2xl p-8 flex items-center justify-center shadow-elevated">
-                  <User size={200} className="text-primary/50" />
+                <div className="relative bg-gradient-to-br from-secondary to-muted rounded-2xl overflow-hidden shadow-elevated">
+                  <img 
+                    src="/lovable-uploads/b6ec22fb-f4d4-4c28-941e-0dfa706c5e75.png" 
+                    alt="Sandun Thilakarathna - Professional Profile" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
